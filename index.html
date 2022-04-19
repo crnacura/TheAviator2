@@ -5,8 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The Aviator 2</title>
+	<meta name="description" content="An extension of Karim Maaloul's game The Aviator." />
+	<meta name="keywords" content="three.js, game, aviator, browser, javascript" />
+	<meta name="author" content="Michel Helms for Codrops" />
 	<link rel="icon" type="image/png" href="favicon.png"/>
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/game.css" />
 	<script src="https://cdn.jsdelivr.net/npm/three@0.139.2/build/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.139.2/examples/js/loaders/OBJLoader.js"></script>
@@ -16,6 +21,13 @@
 <body>
 	<div class="game-holder" id="gameHolder">
 		<div class="header">
+			<div class="header__title-wrap">
+				<h1 class="header__title">
+					<span class="header__title-pre">The</span> 
+					<span class="header__title-main">Aviator 2</span>
+				</h1>
+				<h2 class="header__tagline">An extension of Karim Maaloul's <a href="http://tympanus.net/codrops/?p=26501" class="hover-line">The Aviator</a></h2>
+			</div>
 			<div class="score" id="score">
 				<div class="score__content" id="level">
 					<div class="score__label">level</div>
@@ -25,11 +37,11 @@
 						<circle id="levelCircleStroke" r="80" cx="100" cy="100" fill="none" #f25346 stroke="#68c3c0" stroke-width="14px" stroke-dasharray="502" />
 					</svg>
 				</div>
-				<div class="score__content" id="dist">
+				<div class="score__content score__content--fixed" id="dist">
 					<div class="score__label">distance</div>
 					<div class="score__value score__value--dist" id="distValue">0</div>
 				</div>
-				<div class="score__content" id="coins">
+				<div class="score__content score__content--fixed" id="coins">
 					<div class="score__label">coins</div>
 					<div class="score__value score__value--dist" id="coinsValue">0</div>
 				</div>
@@ -41,6 +53,12 @@
 				</div>
 			</div>
 		</div>
+
+		<nav class="links">
+			<a href="http://tympanus.net/Development/TextRepetitionEffect/" class="hover-line">Previous demo</a>
+			<a href="https://tympanus.net/codrops/?p=63296" class="hover-line">Article</a>
+			<a href="https://github.com/Badestrand/TheAviator2" class="hover-line">GitHub</a>
+		</nav>
 
 		<div class="world" id="world">
 			<canvas id="threejs-canvas"></canvas>
@@ -61,9 +79,7 @@
 		</div>
 
 		<div id="intro-screen" class="visible">
-			<div>
-				<button type="button">Start</button>
-			</div>
+			<button type="button">Start</button>
 		</div>
 
 		<div id="score-screen">
@@ -111,8 +127,6 @@
 			&nbsp;&nbsp;Sound "Coins - 01" by user "DWOBoyle" (https://freesound.org/people/DWOBoyle/sounds/140382/) licensed under Attribution 3.0<br/>
 		</p>
 	</div>
-
-
 	<script type="text/javascript" src="/game.js"></script>
 </body>
 </html>
