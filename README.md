@@ -2,8 +2,13 @@
 
 Updated version of Kaim Maaloul's The Aviator, see his [Article on Codrops](http://tympanus.net/codrops/?p=26501), demo [Demo](http://tympanus.net/Tutorials/TheAviator/) and [GitHub](https://github.com/yakudoo/TheAviator).
 
-This repository is the archive of the source code for the Codrops article and will not get updated.
+![The Aviator 2](https://tympanus.net/codrops/wp-content/uploads/2022/04/Aviator2_featured.jpg)
 
+[Article on Codrops](https://tympanus.net/codrops/?p=63296)
+
+[Demo](https://tympanus.net/Tutorials/TheAviator2/)
+
+This repository is the archive of the source code for the Codrops article and will not get updated.
 
 ## Start
 
